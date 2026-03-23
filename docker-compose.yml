@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  api:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "8001:8000"
+    environment:
+      DB_HOST: host.docker.internal
+      DB_USER: root
+      DB_PASSWORD: Ne4CC5bs
+      DB_NAME: s66160405
+
+volumes:
+  mysql_data:
